@@ -1,0 +1,323 @@
+/*Les couleurs primaires*/
+$primaryColor:#2196F3;
+$darkPrimaryColor: #1976D2;
+$lightPrimaryColor: #BBDEFB;
+$accentColor:#03A9F4;
+/*Les nuances de Gris (50)*/
+$textIcons:#FFFFFF;
+$primaryText:#212121;
+$secondaryText:#757575;
+$divider:#BDBDBD;
+/*Gestion des menus*/
+$radiusMenu:20px;
+/*Gestion des cartes*/
+$couleurCarte: white;
+/*Police*/
+$titre:40px;
+$classique:15px;
+$petit:13px;
+$classiqueFont:'Roboto', sans-serif;
+$titreFont:'Slabo 27px', serif;
+/*Importation de la police*/
+@import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px');
+/*KeyFrames*/
+
+ @keyframes animHoverButton {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+@keyframes entranceCartes {
+    0% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    
+  }
+  @keyframes entranceCartesExplain {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    20% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    85% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+      }
+  }
+@keyframes entranceButton {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    10.1% {
+      opacity: 1;
+    }
+    10.2% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    20.1% {
+      opacity: 1;
+    }
+    20.6% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    30.1% {
+      opacity: 1;
+    }
+    30.5% {
+      opacity: 1;
+    }
+    30.6% {
+      opacity: 0;
+    }
+    45% {
+      opacity: 0;
+    }
+    45.1% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 1;
+    }
+    55.1% {
+      opacity: 0;
+    }
+    57% {
+      opacity: 0;
+    }
+    57.1% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    60.1% {
+      opacity: 0;
+    }
+    65% {
+      opacity: 0;
+    }
+    65.1% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    75.1% {
+      opacity: 0;
+    }
+    77% {
+      opacity: 0;
+    }
+    77.1% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    85.1% {
+      opacity: 0;
+    }
+    86% {
+      opacity: 0;
+    }
+    86.1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  
+/*CSS*/
+body
+{
+    background: #e2e1e0;
+    text-align: center;
+}
+p{
+    font-family: $classiqueFont;
+    font-size: 25px;
+    color:black;
+}
+.flexContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    .lost
+    {
+        flex-direction: column;
+    }
+    .win
+    {
+        flex-direction: column;
+    }
+}
+.flexContainerHead
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $classiqueFont;
+    font-size: 25px;
+    color:black;
+}
+.flexContainerExplain
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cardExplain {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 200px;
+    margin: 1rem;
+    position: relative;
+    width: 700px;
+    font-family: $classiqueFont;
+    font-size: 25px;
+    color:black;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    animation: entranceCartesExplain 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 300px;
+    margin: 1rem;
+    position: relative;
+    width: 300px;
+    animation: entranceCartes 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.cardLost {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 200px;
+    margin: 1rem;
+    position: relative;
+    width: 300px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    animation: entranceCartes 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; 
+}
+.cardWin {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 200px;
+  margin: 1rem;
+  position: relative;
+  width: 300px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  animation: entranceCartes 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.cardHead {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 100px;
+    margin: 0.1rem;
+    position: initial;
+    width: 500px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    animation: entranceCartes 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.button {
+    background: $secondaryText;
+    border-radius: 2px;
+    display: inline-block;
+    height: 100px;
+    margin: 7rem;
+    position: relative;
+    width: 200px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    &:hover
+    {
+      background-color: #969696;
+      p{
+          color:black;
+      }
+    }
+    &:active
+    {
+      background-color: rgb(110, 110, 110);
+      p{
+          color:black;
+      }
+    }
+    p{
+        font-family: $classiqueFont;
+        font-size: 25px;
+        color:white;
+    }
+    
+}
+.start
+    {
+        animation: entranceButton 2s linear both;
+    }
+    .valider
+    {
+      animation: entranceCartes 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    .param
+    {
+      animation: entranceCartes 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    .pause
+    {
+      animation: entranceCartes 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+.card-color1 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+.card-color2 {
+box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="scss/sass.css">
+
+    <!--Le site-->
+    <title>ColorBlock</title>
+</head>
+<body>
+<div class="flexContainerHead">
+    <div class="cardHead">
+            Color.Block();
+    </div>
+</div>
+<div class="flexContainerExplain">
+    <div class="cardExplain">
+        <p>
+            Lorsque la couleur est la même dans les deux cases, cliquez sur le boutton du milieu.
+            <br><br>
+            Si vous atteignez le score de <b>60</b>, vous gagnez.
+            <br>
+            Cliquez sur Start pour démarrer.
+        </p>    
+    </div>
+</div>
+<div class="flexContainer">
+    <div class="card card-color1"></div>
+    <div class="button start">
+        <p>START!</p>
+    </div>
+    <div class="button valider">
+        <p id="score">10</p>
+    </div>
+    <div class="card card-color2"></div>
+</div>
+<div class="cardExplain notifDiff">
+    <p>
+        Pas mal !
+        <br>
+        On va augmenter la difficultée tout doucement.
+    </p>    
+</div>
+<div class="cardExplain notifDiff2">
+    <p>
+        OK.
+        <br>
+        Bonne chance...
+    </p>    
+</div>
+<div class="cardExplain notifDiff3">
+    <p>
+        Puisque visiblement, le jeu est trop simple
+    </p>    
+</div>
+</div>
+<div class="flexContainer">
+        <div class="button param">
+            <p>PARAM</p>
+        </div>
+        <div class="button pause">
+            <p id="#btnPause">PAUSE</p>
+        </div>
+</div>
+<div class="flexContainer diff">
+    <p>Difficulté :</p>
+    <div class="button paramdiff" id='diff1'>
+        <p>MEDIUM</p>
+    </div>
+    <div class="button paramdiff" id='diff2'>
+        <p>HARD</p>
+    </div>
+    <div class="button paramdiff" id='diff3'>
+        <p>G@M3RZ.</p>
+    </div>
+</div>
+<div class="flexContainer diff">
+    <p>Cheat :</p>
+    <div class="button paramdiff" id='cheat1'>
+        <p>+1 pts</p>
+    </div>
+    <div class="button paramdiff" id='cheat2'>
+        <p>+5 pts</p>
+    </div>
+    <div class="button paramdiff" id='cheat3'>
+        <p>+10 pts</p>
+    </div>
+</div>
+<div class="flexContainer lost">
+    <div class="cardLost">
+        <p>
+            La partie est terminée.
+            <br>
+            Vous avez perdu.
+        </p>
+    </div>
+</div>
+<div class="flexContainer win">
+    <div class="cardWin">
+        <p>
+            La partie est terminée.
+            <br>
+            Vous avez gagné.
+        </p>
+    </div>
+    <img class="win" src="https://static1.fjcdn.com/comments/He+was+going+on+to+become+a+pretty+cool+guy+_b7948dbe5f066437029dce56a239eaf3.png">
+</div>
+<div class="flexContainer replay">
+    <div class="button rejouer">
+        <p>REJOUER</p>
+    </div>
+</div>
+
+
+
+<p id="ind" hidden>0</p>
+<p id="indexCouleurs" hidden>0</p>
+<p id="indexPause" hidden>0</p>
+<p id="indexParam" hidden>0</p>
+<!--Fin du document-->
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>
